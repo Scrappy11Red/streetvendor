@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Update Product{% endblock %}
+
+{% block content %}
+<form method="post">
+    <div class="list_container">
+        <div class="detail_page">
+            {% csrf_token %}
+                <div class="detail_page">
+                    <img src="{{ product.image_url }}" class="Image" />
+                    <div class="product_details_card">
+                        <div class="product_details">
+                            <p>Product Name:<br> {{ product.name }}</p>
+                            <p>Stock Quantity:<br> {{ product.stock_quantity }}</p>
+                            <p>Description:<br> {{ product.description }}</p>
+                            <p>Category:<br> {{ product.category }}</p>
+                            <p>Price:<br> R{{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="buttonz">
+        <a href="/{{ product.id }}">
+            <button type='button' class="butt">Cancel</button>
+        </a>
+        <input type="submit" value="Confirm"  class="butt">
+    </div>
+    </div>
+</form>
+{% endblock %}

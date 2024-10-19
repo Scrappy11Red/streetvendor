@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+<div class="list_container">
+    <h1 class="hp_title">OUR LATEST ITEMS</h1>
+
+        {% for product in products_list %}
+        
+            <div class="product_card">
+                <div class="product_card_details">
+                <a href="/{{ product.id }}" class="card">
+                    {{ product.name }}
+                </a>
+                <p>{{ product.stock_quantity }}</p>
+                <p>R{{ product.price }}</p>
+                </div>
+           </div>
+        {% endfor %}
+
+
+    <h1 class="hp_title">SHOP BY CATEGORY</h1>
+
+    
+
+</div>
+{% endblock %}

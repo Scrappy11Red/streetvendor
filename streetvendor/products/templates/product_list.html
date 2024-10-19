@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Products
+{% endblock %}
+
+{% block content %}
+<div class="list_container">
+    <h1>Products</h1>
+
+    <div class="list_elements">
+        {% for product in product_list %}
+            <a href="/{{ product.id }}">
+                <div class="product_card">
+                    <div class="product_card_details">
+                        <a href="/{{ product.id }}" class="card">
+                            Product Name: {{ product.name }}
+                        </a>
+                        <p>Stock Quantity: {{ product.stock_quantity }}</p>
+                        <p>Price: R{{ product.price }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

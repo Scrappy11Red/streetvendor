@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    place-content: center;
+    text-decoration: none;
+}
+
+/* Navbar elements */
+
+.navbar {
+    background: white;
+    font-size: 25px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    overflow: hidden;
+    z-index: 100;
+    height: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    text-decoration: none;
+}
+
+ul, li {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* Content elements */
+
+.homepage {
+    z-index: 1;
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hp_title {
+    margin-top: 75px;
+}
+
+.content {
+    margin: 50px;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+
+/* Footer elements */
+
+.footer {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+
+/* Signup Form */
+
+.signup_form {
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
+    height: 400px;
+    width: 250px;
+    margin-top: 150px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.helptext {
+    display: none;
+}
+
+input {
+    width: 150px;
+}
+
+/* Login Form Elements */
+.login_form {
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
+    height: 200px;
+    width: 200px;
+    margin-top: 150px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* Product List Elements */
+.Item-card {
+    border-radius: 10px;
+    place-content: center;
+    place-items: center;
+    height: 350px;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+.list_container {
+    z-index: 1;
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create_product_form {
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
+    height: 550px;
+    width: 400px;
+    margin-top: 100px;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.product_card {
+    border-radius: 10px;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    height: 350px;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.product_card:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* (125% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.product_card_details {
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0px;
+    font-size: larger;
+    font-weight: bold;
+    width: 250px;
+    height: 105px;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.list_elements {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    
+}
+
+
+/* Product Detail Page Elements */
+
+.detail_page {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
+    height: 500px;
+    width: 950px;
+    margin-top: 5px;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.product_details_card {
+    border-radius: 10px;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    height: 450px;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.product_details {
+    height: 400px;
+    width: 300px;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.buttonz {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.butt {
+    width: 80px;
+    height: 45px;
+    font-weight: bold;
+}
+
+.Image {
+    display: block;
+    height: 450px;
+    width: 350px;
+}
+
+
+/* About Us */
+.about_us {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 120vh;
+}
+
+.p {
+    margin-top: 50px;
+}

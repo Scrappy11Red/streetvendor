@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Create Product{% endblock %}
+
+{% block content %}
+    <form method="post" class="create_product_form">
+		<h1>Create Product</h1>
+		{% csrf_token %}
+		{{ form.as_table }}
+		<button type="submit" class="btn">Create</button>
+    </form>
+{% endblock %}

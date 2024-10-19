@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+<div class="list_container">
+
+    <div class="detail_page">
+            <img src="{{ product.image_url }}" class="Image" />
+            <div class="product_details_card">
+                <div class="product_details">
+                    <p>Product Name:<br> {{ product.name }}</p>
+                    <p>Stock Quantity:<br> {{ product.stock_quantity }}</p>
+                    <p>Description:<br> {{ product.description }}</p>
+                    <p>Category:<br> {{ product.category }}</p>
+                    <p>Price:<br> R{{ product.price }}</p>
+                </div>
+            </div>
+            
+    </div>
+    {% if user.is_authenticated %}
+        <div class="buttonz">
+            <a href="update/">
+                <button class="butt">Update</button>
+            </a>
+            <a href="delete/">
+                <button class="butt">Delete</button>
+            </a>
+        </div>
+
+    {% else %}
+        
+
+    {% endif %}
+</div>
+{% endblock %}

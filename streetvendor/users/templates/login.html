@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Log Into Your Account{% endblock %}
+
+{% block content %}
+    <form method="post" class="login_form" action="/login">
+		<h1>Login</h1>
+	{% csrf_token %}
+	{{ form.as_table }}
+	<button type="submit" class="btn">Submit</button>
+    </form>
+{% endblock %}

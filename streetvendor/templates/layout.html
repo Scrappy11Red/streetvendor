@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Home Page
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+        <div class="navbar">
+
+            <div class="nav_element">
+                <ul>
+                    <li>
+                        <a href="/list" title="home">🛣️ Home</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_element">
+                <ul>
+                    <li>
+                        <a href="/list" title="products">👕 Products</a>
+                    </li>
+                    <li>
+                        <a href="/about" title="about">ℹ️ About Us</a>
+                    </li>
+                    <li>
+                        <a href="/contact" title="contact us">📞 Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="nav_element">
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="{% url "product_create" %}">➕ Add Product</a>
+                        </li>
+                        <li>
+                            <form action="{% url "logout" %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit">Logout</button>
+                            </form>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{% url "login" %}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{% url "signup" %}">📝 Signup</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+</body>
+</html>
